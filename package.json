@@ -1,0 +1,153 @@
+{
+  "name": "voice-web",
+  "version": "0.0.1",
+  "author": "喵星人",
+  "scripts": {
+    "dev": "vite --mode development",
+    "dev.test": "vite --mode test",
+    "dev.grey": "vite --mode grey",
+    "dev.prod": "vite --mode production",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "build.dev": "vite build --mode development",
+    "build.test": "vite build --mode test",
+    "build.grey": "vite build --mode grey",
+    "build.prod": "vite build --mode production",
+    "serve": "vite preview",
+    "plop": "plop",
+    "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
+    "clean:lib": "rimraf node_modules",
+    "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
+    "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
+    "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint:lint-staged": "lint-staged",
+    "prepare": "husky install",
+    "commit": "git add . && git-cz",
+    "deps": "yarn upgrade-interactive --latest"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "@vueuse/components": "^10.9.0",
+    "@vueuse/core": "^10.9.0",
+    "axios": "^1.6.8",
+    "dayjs": "^1.11.10",
+    "echarts": "^5.5.0",
+    "html2canvas": "^1.4.1",
+    "lodash": "^4.17.21",
+    "mitt": "^3.0.1",
+    "pinia": "2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.1",
+    "qs": "^6.12.0",
+    "sudmgp-sdk-js": "^1.0.2",
+    "sudmgp-sdk-js-wrapper": "^0.1.17",
+    "swiper": "^11.1.1",
+    "vant": "^4.8.8",
+    "vconsole": "^3.15.1",
+    "video-animation-player": "^1.0.5",
+    "vue": "^3.4.21",
+    "vue-qr": "^4.0.9",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@types/node": "^20.12.7",
+    "@types/nprogress": "^0.2.3",
+    "@types/qs": "^6.9.14",
+    "@typescript-eslint/eslint-plugin": "^5.59.10",
+    "@typescript-eslint/parser": "^5.59.10",
+    "@vitejs/plugin-legacy": "4.1.1",
+    "@vitejs/plugin-vue": "^4.2.0",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "autoprefixer": "^10.4.19",
+    "cnjm-postcss-px-to-viewport": "^1.0.1",
+    "cz-git": "^1.9.1",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-define-config": "^1.20.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-vue": "^9.24.1",
+    "husky": "^8.0.3",
+    "import": "^0.0.6",
+    "lint-staged": "^13.2.2",
+    "mockjs": "^1.1.0",
+    "nprogress": "^0.2.0",
+    "plop": "^3.1.2",
+    "postcss": "^8.4.38",
+    "postcss-html": "^1.6.0",
+    "postcss-less": "^6.0.0",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-scss": "^4.0.9",
+    "prettier": "2.8.8",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "sass": "1.74.1",
+    "stylelint": "^15.8.0",
+    "stylelint-config-recommended": "^12.0.0",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-prettier": "^3.0.0",
+    "terser": "^5.30.3",
+    "typescript": "5.4.5",
+    "unocss": "0.53.1",
+    "unplugin-auto-import": "^0.16.4",
+    "unplugin-icons": "^0.16.3",
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.3.9",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-mkcert": "^1.15.0",
+    "vite-plugin-mock": "^3.0.1",
+    "vite-plugin-pages": "^0.31.0",
+    "vite-plugin-progress": "^0.0.7",
+    "vite-plugin-restart": "^0.3.1",
+    "vite-plugin-style-import": "^2.0.0",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vite-plugin-vconsole": "^2.1.1",
+    "vite-plugin-vue-images": "^0.6.1",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vue-eslint-parser": "^9.3.1",
+    "vue-tsc": "^1.7.0"
+  },
+  "resolutions": {
+    "bin-wrapper": "npm:bin-wrapper-china"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
+    ],
+    "package.json": [
+      "prettier --write"
+    ],
+    "*.vue": [
+      "prettier --write",
+      "eslint --fix",
+      "stylelint --fix"
+    ],
+    "*.{scss,less,styl,html}": [
+      "stylelint --fix --allow-empty-input",
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  }
+}

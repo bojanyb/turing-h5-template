@@ -1,0 +1,18 @@
+.van-toast--text {
+  background: rgb(0 0 0 / 70%) !important;
+}
+
+/* vant4的 Toast 和 Popup 样式冲突,会导致 Toast 变成白底 */
+.van-popup.van-toast {
+  background: var(--van-toast-background) !important;
+  box-sizing: content-box !important;
+
+  /* 下面3条css,影响不大 */
+  transition: all var(--van-duration-fast) !important;
+  width: var(--van-toast-default-width) !important;
+  max-width: var(--van-toast-max-width) !important;
+}
+
+.van-popup.van-toast .van-toast__icon {
+  font-size: var(--van-toast-icon-size) !important;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="icon" href="./favicon.ico">
+		<title>等级说明</title>
+		<style>
+			body {
+				margin: 0;
+			}
+
+			.fl {
+				float: left;
+			}
+
+			.flex {
+				display: flex;
+			}
+
+			#titlePage {
+				padding: 20px 26px;
+			}
+
+			.titleItem {
+				margin-bottom: 26px;
+			}
+
+			.titleHead {
+				color: #333333;
+				font-size: 16px;
+				font-weight: bold;
+				display: flex;
+				align-items: center;
+				line-height: 1.5;
+			}
+
+			.randBox {
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+				display: block;
+				margin-right: 14px;
+			}
+			
+			.color1 {
+				background: #FFEB7A;
+			}
+			
+			.color2 {
+				background: #FD3577;
+			}
+			
+			.color3 {
+				background: #5C007E;
+			}
+			
+			.titleContent,
+			.tipsText{
+				color: #3D3D3D;
+				font-size: 14px;
+				padding-left: 20px;
+				line-height: 1.5;
+			}
+			.tipsText{
+				color: #5C007E;
+				font-size: 12px;
+			}
+			.titleImg {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="titlePage">
+			<div class="titleItem">
+				<div class="titleHead">
+					<div class="randBox color1 fl"> </div><div class="titleTitle fl">主播等级如何升级?</div>
+				</div>
+				<div class="titleContent">任何人收到的礼物都会对应成长等级表进行自动升级</div>
+			</div>
+			<div class="titleItem flex">
+				<img class="titleImg" src="./img/anchorTitleImg.png" />
+			</div>
+		</div>
+		<script type="text/javascript" src="./RoomRedis/js/ajax.js"></script>
+    <script type="text/javascript" src="./RoomRedis/js/jQuery_v3.4.1.js"></script>
+    <script type="text/javascript" src="./RoomRedis/js/index.js"></script>
+	</body>
+</html>

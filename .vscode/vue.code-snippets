@@ -1,0 +1,44 @@
+{
+	"store新建页面": {
+		"scope": "typescript",
+		"prefix": "store",
+		"body": [
+			"import { defineStore } from 'pinia'",
+			"import { piniaStore } from '@store'",
+			"",
+			"export const use$1Store = defineStore(",
+			"    '${1/(.*)/${1:/camelcase}/}',",
+			"    {",
+			"        state: () => ({}),",
+			"        getters: {},",
+			"        actions: {}",
+			"    }",
+			")",
+			"",
+			"export function use$1OutsideStore() {",
+			"    return use$1Store(piniaStore)",
+			"}"
+		],
+		"description": "store page"
+	},
+	"page": {
+		"scope": "vue",
+		"prefix": "page",
+		"body": [
+			"<template>",
+			"    <div>",
+			"       $3",
+			"    </div>",
+			"</template>",
+			"",
+			"<script setup name='$1'>",
+			"    $2",
+			"</script>",
+			"",
+			"<style lang='scss' scoped>",
+			"    $4",
+			"</style>"
+		],
+		"description": "vue page"
+	}
+}

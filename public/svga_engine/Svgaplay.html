@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <style type="text/css">
+        #demoCanvas {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            background-size: 100% 100%;
+        }
+    </style><!-- 此处配置视频在整个页面的大小 -->
+</head>
+
+
+<body style="background: transparent;">
+    <!-- css与js要对这个div进行操作时就能通过id来找到这个div -->
+    <script src="svga.min.js"></script>
+
+    <div id="demoCanvas"></div>
+
+    <script>
+
+        // 播放动画
+        function playSvga(obj) {
+
+            console.error("==================playSvga======================" + JSON.stringify(obj));
+
+            // 获取 .net 传递进来的对象，用户回调播放完成
+            if (!dataObj) {
+                dataObj = chrome.webview.hostObjects.dataObj;
+            }
+
+            // 实例化播放器
+            var player = new SVGA.Player('#demoCanvas');
+            // 设置播放次数
+            if (!obj.loop) {
+                player.loops = 1;
+            }
+
+            // 实例化解析器
+            var parser = new SVGA.Parser('#demoCanvas');
+
+            // 开始加载数据
+            parser.load(obj.path, function (videoItem) {
+
+                player.setVideoItem(videoItem);
+
+                player.onFinished(() => {
+                    // 动画播放完成
+                    console.error("==================onFinished======================");
+                    dataObj.onComplete();
+                });
+
+                // 动画加载完成，开始播放
+                player.startAnimation();
+            }, function (err) {
+
+                // 动画加载失败
+                console.error("==================onError======================" + obj.path);
+                dataObj.onComplete();
+            });
+        }
+
+    </script>
+</body>
+</html>

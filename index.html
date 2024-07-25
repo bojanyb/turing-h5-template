@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no, viewport-fit=cover" />
+    <title><%- title %></title>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript">
+      const userAgent = navigator.userAgent;
+      if (/miniProgram/i.test(userAgent) && /micromessenger/i.test(userAgent)) {
+        // 微信小程序 JS-SDK 如果不需要兼容微信小程序，则无需引用此 JS 文件。
+        document.write('<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"><\/script>');
+      }
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

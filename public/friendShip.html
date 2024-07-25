@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico">
+		<title>亲密榜说明</title>
+		<style>
+			body {
+				margin: 0;
+			}
+
+			.flex {
+				display: flex;
+			}
+
+			#titlePage {
+				padding: 20px 26px;
+			}
+
+			.titleItem {
+				letter-spacing: 0;
+				margin-bottom: 26px;
+			}
+
+			.titleHead {
+				color: #333333;
+				font-size: 16px;
+				font-weight: bold;
+				letter-spacing: 0;
+				display: flex;
+				align-items: center;
+				line-height: 1.5;
+			}
+
+			.titleContent,
+			.tipsText{
+				color: #3D3D3D;
+				font-size: 14px;
+				line-height: 1.5;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="titlePage">
+			<div class="titleItem">
+				<div class="titleHead">
+					<div class="titleTitle">亲密榜说明</div>
+				</div>
+				<div class="titleContent">
+					亲密榜是根据用户之间的亲密值进行排名的一个榜单，排名越高，则反映当前对TA的贡献价值越高。<br/>
+					累计赠送TA礼物价值≥10000米粒即可有机会上榜，榜单根据双方亲密值的高低降序排名显示，最多显示前100名。
+				</div>
+			</div>
+			<div class="titleItem">
+				<div class="titleHead">
+					<div class="titleTitle">如何提升对TA的亲密值</div>
+				</div>
+				<div class="titleContent">用户可通过赠送礼物，来增加与TA的亲密值， 每赠送对方价值100米粒的礼物可增加100亲密值，亲密值越高，排名越靠前。</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./RoomRedis/js/ajax.js"></script>
+    <script type="text/javascript" src="./RoomRedis/js/jQuery_v3.4.1.js"></script>
+    <script type="text/javascript" src="./RoomRedis/js/index.js"></script>
+	</body>
+</html>

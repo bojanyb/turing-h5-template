@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1" />
+  <link rel="icon" href="./favicon.ico">
+  <title>客服反馈</title>
+</head>
+
+<body>
+  <!-- 替换为自己企业的相关信息 -->
+  <script>
+    (function (w, d, n, a, j) {
+      w[n] =
+        w[n] ||
+        function () {
+          (w[n].a = w[n].a || []).push(arguments);
+        };
+      j = d.createElement('script');
+      j.async = true;
+      j.src = 'https://qiyukf.com/script/fab91a0a8afc9cac78658245baaefcd0.js?hidden=1';
+      d.body.appendChild(j);
+    })(window, document, 'ysf');
+    /**
+     * 获取当前url参数
+     */
+     function getUrlParams() {
+      const url = decodeURIComponent(window.location.href);
+      const obj = {};
+      const queryString = url.split('?')[1];
+      if (queryString) {
+          const params = queryString.split('&');
+          params.forEach((item) => {
+              const param = item.split('=');
+              obj[param[0]] = param[1] || '';
+          });
+      }
+      return obj;
+    }
+    /**
+     * 页面跳转（修复安卓replace失效问题）
+     */
+    function locationReplace(url) {
+      if (history.replaceState) {
+        history.replaceState(null, document.title, url);
+        history.go(0);
+      } else {
+        location.replace(url);
+      }
+    }
+    /**
+     * 上报用户信息
+     */
+    function configUsr() {
+      // const params = getUrlParams();
+      const params = new URLSearchParams(window.location.search);
+      console.log('[ params ] >', params.toString())
+      ysf('config', {
+        uid: params.get('uid') || '',
+        name: params.get('nickName') || '',
+        data: JSON.stringify([
+          { key: 'real_name', value: params.get('nickName') },
+          { key: 'mobile_phone', value: '', hidden: true },
+          { key: 'email', value: '', hidden: true },
+          { key: 'avatar', label: '头像', value: params.get('avatarUrl') },
+        ]),
+        success: function () {
+          console.log('客户信息上报成功');
+          // locationReplace(ysf('url'))
+        },
+        error: function () {
+          console.log('客户信息上报失败');
+          // locationReplace(ysf('url'))
+        },
+      });
+    }
+    ysf('onready', function () {
+      configUsr();
+      // ysf('open');
+      console.log('[ ysfurl ] >', ysf('url'))
+      window.location.replace(ysf('url'))
+    });
+  </script>
+</body>
+
+</html>

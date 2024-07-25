@@ -1,0 +1,20 @@
+/* global css variable */
+
+/* 行为相关颜色 */
+$tu-color-primary: #007aff;
+$tu-color-success: #4cd964;
+$tu-color-warning: #f0ad4e;
+$tu-color-error: #dd524d;
+
+/* 背景颜色 */
+$tu-bg-color: #f8f8f8;
+$tu-bg-color-grey: #f8f8f8;
+$tu-bg-color-hover: #f1f1f1; // 点击状态颜色
+$tu-bg-color-mask: rgb(0 0 0 / 40%); // 遮罩颜色
+
+/* 主题颜色 */
+$tu-header-logo-text-color: #303133;
+$tu-header-bg-color: #fff;
+$tu-header-text-color: #303133;
+$tu-header-text-color-regular: #606266;
+$tu-header-border-color: #e4e7ed;
