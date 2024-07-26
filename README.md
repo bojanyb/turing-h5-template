@@ -1,10 +1,10 @@
-# voice-web 项目文档
+# turing-h5-template 项目文档
 
 ## 启动项目
 
 ```javascript
 // 拉取项目
-git clone git@e.coding.net:aiyilive/miaomiaostar/voice-web.git
+git clone git@github.com:bojanyb/turing-h5-template.git
 
 // 安装依赖
 yarn install  or  pnpm install(不推荐使用npm)
