@@ -360,6 +360,6 @@ export class SDKGameView {
   // 根据域名生成bundleId
   public getBundleId() {
     // return location.hostname;
-    return 'h5.linux.ac.cn';
+    return '';
   }
 }

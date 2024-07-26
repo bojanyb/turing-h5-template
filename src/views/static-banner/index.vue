@@ -35,7 +35,7 @@
           setPlacardAndTitle(placard2, '开黑啦文明公约');
           break;
         default:
-          setPlacardAndTitle(placard2, '团团文明公约');
+          setPlacardAndTitle(placard2, 'turing-h5-template文明公约');
           break;
       }
     } else if (placardNumValue === 3) {

@@ -121,7 +121,7 @@ export const staticRouter: RouteRecordRaw[] = [
         name: 'musicCompanion',
         component: () => import('/@/views/music-companion/index.vue'),
         meta: {
-          title: '团团陪伴官',
+          title: 'turing-h5-template陪伴官',
         },
       },
       {

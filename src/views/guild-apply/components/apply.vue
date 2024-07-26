@@ -6,7 +6,9 @@
     <div class="mainBox">
       <div class="preface">
         <h6>前言：</h6>
-        <p>感谢您关注团团语音平台，请完整填写如下信息，方才转交相关工作人员，会由相应的运营人员负责对接沟通【相关政策以及入驻条件】</p>
+        <p
+          >感谢您关注turing-h5-template语音平台，请完整填写如下信息，方才转交相关工作人员，会由相应的运营人员负责对接沟通【相关政策以及入驻条件】</p
+        >
       </div>
       <div class="formBox">
         <van-form @submit="onSubmit" label-width="300px">
@@ -14,10 +16,10 @@
             class="requiredBox"
             v-model="ruleForm.user_number"
             type="number"
-            label="1.团团ID"
-            placeholder="请输入团团ID"
+            label="1.turing-h5-templateID"
+            placeholder="请输入turing-h5-templateID"
             maxlength="9"
-            :rules="[{ required: true, message: '请输入团团ID' }]"
+            :rules="[{ required: true, message: '请输入turing-h5-templateID' }]"
           />
           <van-field class="requiredBox" name="radio" label="2.公会类型">
             <template #input>
